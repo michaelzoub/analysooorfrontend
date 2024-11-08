@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.loading {
+    border: 7px #eeeeee solid;
+    border-top: 7px #c2c2c2 solid;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    animation: 2s infinite load;
+}
+
+.gradient {
+    background: linear-gradient(to right, rgb(255, 155, 155), rgb(255, 51, 51));
+    -webkit-background-clip: text; /* For Safari */
+    -webkit-text-fill-color: transparent; /* For Safari */
+}
+
+.resize-cursor {
+    position: absolute;
+    top: 0;
+    right: -10px;
+    height: 100%;
+    width: 15px;
+    cursor: ew-resize;
+}
+
+@keyframes load {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
